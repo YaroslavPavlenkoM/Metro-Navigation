@@ -1,0 +1,22 @@
+﻿<Window x:Class="Metro_Navigation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local ="clr-namespace:Metro_Navigation"
+        WindowState="Maximized"
+        Title="Metro Navigation" Height="350" Width="1366" Background="DarkCyan">
+
+    <Grid Margin="0,31,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="695*"/>
+            <ColumnDefinition Width="663*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="startStation" FontSize="18" Background="LightGray" HorizontalAlignment="Left" Height="30" Margin="7,-22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222"/>
+        <TextBox Name="finishStation" FontSize="18" Background="LightGray" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="222" Margin="260,-22,0,0"/>
+        <m:Map x:Name="myMap" CredentialsProvider="AjyC0y-RUih8Y0APe9G0tEV910BRjDBBaSVICVIZAtYSBuBlXWXLvREecMAIHgOK" Center="50.443353, 30.522914" ZoomLevel="12" Margin="0,20,0,0" Grid.ColumnSpan="2">
+
+        </m:Map>
+        <Button FontSize="22" Content="Прокласти маршрут" HorizontalAlignment="Left" Margin="427,-31,-9,0" VerticalAlignment="Top" Width="245" Height="51" Click="Button_Click" Grid.Column="1"/>
+    </Grid>
+</Window>
